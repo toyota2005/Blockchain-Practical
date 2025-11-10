@@ -15,7 +15,7 @@ contract Bank {
      function Deposite() public  payable {
         require(accountOwner == msg.sender,"Your are not an account owner");
         require(msg.value > 0,"Amount Should be Grater than 0");
-        balance=msg.value;
+        balance=msg.value; //balance+=msg.value;
      }
 
     //Withdraw
@@ -33,3 +33,4 @@ contract Bank {
        return balance;
     }
 }
+
